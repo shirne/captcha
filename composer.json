@@ -1,0 +1,22 @@
+{
+    "name": "shirne/captcha",
+    "description": "captcha package for thinkphp5",
+    "authors": [
+        {
+            "name": "shirne",
+            "email": "shirne@126.com"
+        }
+    ],
+    "license": "Apache-2.0",
+    "require": {
+    	"topthink/framework": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "shirne\\captcha\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    }
+}
