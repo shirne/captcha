@@ -24,7 +24,7 @@ Validate::setTypeMsg('captcha', ':attribute错误!');
  */
 function captcha($id = '', $config = [], $store = null)
 {
-    $captcha = new \think\captcha\Captcha($config, $store);
+    $captcha = new \shirne\captcha\Captcha($config, $store);
     return $captcha->entry($id);
 }
 
@@ -56,6 +56,6 @@ function captcha_check($value, $id = '', $store=null)
 {
     $config = (array) Config::pull('captcha');
     $mode = isset($config['mode'])?$config['mode']:'';
-    $captcha = new \think\captcha\Captcha($config, $mode=='cache'? think\facade\Cache::instance():null);
+    $captcha = new \shirne\captcha\Captcha($config, $mode=='cache'? think\facade\Cache::instance():null);
     return $captcha->check($value, $id);
 }
